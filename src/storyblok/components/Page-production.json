@@ -1,0 +1,47 @@
+{
+  "name": "Page",
+  "display_name": null,
+  "created_at": "2023-10-21T12:17:33.561Z",
+  "updated_at": "2023-10-21T12:22:38.796Z",
+  "id": 4762775,
+  "schema": {
+    "Title": {
+      "type": "text"
+    },
+    "Description": {
+      "type": "textarea"
+    },
+    "Content": {
+      "type": "richtext",
+      "required": true,
+      "translatable": true,
+      "customize_toolbar": true,
+      "toolbar": [
+        "blok",
+        "bold",
+        "list",
+        "h2",
+        "h3",
+        "h4",
+        "image",
+        "italic",
+        "link",
+        "anchor",
+        "olist",
+        "paragraph",
+        "underline"
+      ]
+    }
+  },
+  "image": null,
+  "preview_field": null,
+  "is_root": true,
+  "preview_tmpl": null,
+  "is_nestable": false,
+  "all_presets": [],
+  "preset_id": null,
+  "real_name": "Page",
+  "component_group_uuid": null,
+  "color": null,
+  "icon": null
+}

@@ -1,0 +1,6 @@
+query Page ($id: ID!) {
+	ContentNode (id: $id) {
+		content
+		is_startpage
+	}
+}

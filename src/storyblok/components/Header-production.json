@@ -1,0 +1,37 @@
+{
+  "name": "Header",
+  "display_name": null,
+  "created_at": "2023-10-21T12:17:45.238Z",
+  "updated_at": "2023-10-21T12:19:09.875Z",
+  "id": 4762776,
+  "schema": {
+    "Title": {
+      "type": "text"
+    },
+    "Text": {
+      "type": "textarea",
+      "required": true,
+      "translatable": true,
+      "customize_toolbar": true,
+      "toolbar": [
+        "bold",
+        "list",
+        "copy",
+        "cut",
+        "h3"
+      ]
+    }
+  },
+  "image": null,
+  "preview_field": null,
+  "is_root": false,
+  "preview_tmpl": null,
+  "is_nestable": true,
+  "all_presets": [],
+  "preset_id": null,
+  "real_name": "Header",
+  "component_group_uuid": "54f52b94-da61-419e-b036-92e7232ed3e1",
+  "color": null,
+  "icon": null,
+  "component_group_name": "Blocks"
+}

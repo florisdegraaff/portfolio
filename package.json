@@ -6,19 +6,33 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "pull-components": "storyblok pull-components --space 258296 --separate-files  --file-name production --path ./storyblok/components/",
+    "push-components": "storyblok push-components ./storyblok/components/**.json --space 258296",
+    "codegen": "graphql-codegen --config codegen.ts"
   },
   "dependencies": {
+    "@storyblok/react": "^2.4.7",
     "@types/node": "20.4.5",
     "@types/react": "18.2.17",
     "@types/react-dom": "18.2.7",
+    "clsx": "^2.0.0",
+    "graphql": "^16.8.1",
+    "graphql-request": "^6.1.0",
     "next": "13.4.12",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "typescript": "5.1.6"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "5.0.0",
+    "@graphql-codegen/client-preset": "4.1.0",
+    "@graphql-codegen/typescript": "^4.0.1",
+    "@graphql-codegen/typescript-graphql-request": "^6.0.0",
     "eslint": "8.45.0",
-    "eslint-config-next": "13.4.12"
+    "eslint-config-next": "13.4.12",
+    "eslint-config-prettier": "^8.9.0",
+    "sass": "^1.69.4",
+    "storyblok": "^3.25.2"
   }
 }

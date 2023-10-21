@@ -1,0 +1,27 @@
+.container {
+    width: 100%;
+    max-width: 1920px;
+    padding-inline: 2rem;
+    margin-inline: auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 0.4rem;
+
+    @media screen and (min-width: 480px) {
+        column-gap: 0.8rem;
+        grid-template-columns: repeat(8, 1fr);
+    }
+
+    @media screen and (min-width: 768px) {
+        column-gap: 1.2rem;
+        grid-template-columns: repeat(10, 1fr);
+    }
+
+    @media screen and (min-width: 1024px) {
+        column-gap: 1.6rem;
+        grid-template-columns: repeat(12, 1fr);
+    }
+}
