@@ -1,4 +1,3 @@
-
 import type { CodegenConfig } from '@graphql-codegen/cli';
 
 const config: CodegenConfig = {
@@ -12,10 +11,19 @@ const config: CodegenConfig = {
   }],
   documents: 'src/storyblok/graphql',
   generates: {
-    'src/storyblok/generated/sdk.ts': {
-      plugins: ['typescript', 'typescript-operations', 'typescript-graphql-request']
+    'src/storyblok/generated.ts': {
+      plugins: [
+        {
+          add: {
+            content: '/* eslint-disable */'
+          }
+        },
+        'typescript',
+        'typescript-operations',
+        'typescript-graphql-request',
+        'fragment-matcher'
+      ],
     }
   }
 };
-
 export default config;
