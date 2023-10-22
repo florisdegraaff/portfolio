@@ -1,4 +1,5 @@
 /* eslint-disable */
+// @ts-nocheck
 import { GraphQLClient } from 'graphql-request';
 import { GraphQLClientRequestHeaders } from 'graphql-request/build/cjs/types';
 import gql from 'graphql-tag';
