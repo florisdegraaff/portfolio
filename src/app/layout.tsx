@@ -1,7 +1,9 @@
+import { storyblokSdk } from '@/storyblok/client'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import { client } from '@/storyblok/client'
+import { storyblokDataToNavigation } from '@/components/layout/navigation/dataMapper'
+import { Navigation } from '@/components/layout/navigation'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -11,14 +13,12 @@ export const metadata: Metadata = {
 }
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
-  // const navigation = await client.query({
-  //   query: navigationQuery
-  // })
+  const navigation = await storyblokSdk?.Navigation()
 
   return (
     <html lang="en">
       <body className={inter.className}>
-        {/* <Navigation {...storyblokDataToNavigation(navigation)} /> */}
+        <Navigation {...storyblokDataToNavigation(navigation)} />
         {children}
       </body>
     </html>

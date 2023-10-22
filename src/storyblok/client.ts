@@ -1,9 +1,18 @@
-import { ApolloClient, InMemoryCache, ApolloProvider, gql } from '@apollo/client';
+import { GraphQLClient } from 'graphql-request';
+import { getSdk } from './generated';
 
-export const client = new ApolloClient({
-  uri: 'https://flyby-router-demo.herokuapp.com/',
-  headers: {
-    Token: process.env.STORYBLOK_PREVIEW_TOKEN ?? ''
-  },
-  cache: new InMemoryCache(),
-});
+const getStoryblokSdk = () => {
+  const Token = process.env.STORYBLOK_PREVIEW_TOKEN
+  if (!Token) return;
+
+  const client = new GraphQLClient('https://gapi.storyblok.com/v1/api', {
+    headers: {
+      Token
+    }
+  })
+
+  const sdk = getSdk(client)
+  return sdk
+}
+
+export const storyblokSdk = getStoryblokSdk()
